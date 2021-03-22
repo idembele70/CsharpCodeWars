@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace CsharpCodeWars
 {
@@ -7,16 +6,11 @@ namespace CsharpCodeWars
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine(sumnation());
+            System.Console.WriteLine(NoSpace());
         }
-     public  static int sumnation(int num=8)
-       {
-           int sum = 0 ;
-           for (int i = 0; i <= num; i++)
-           {
-               sum +=i;
-           }
-           return sum;
-       }
+     static string NoSpace(string input="Hello world how are you today.")
+     {
+         return input.Replace(" ", "");
+     }
     }
 }
