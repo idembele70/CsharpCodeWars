@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Text;
+using System.Linq;
 
 namespace CsharpCodeWars
 {
@@ -7,16 +7,16 @@ namespace CsharpCodeWars
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine(Solution());
+            System.Console.WriteLine(sumnation());
         }
-       static String Solution(string str="wolrd")
+     public  static int sumnation(int num=8)
        {
-           string newStr = "";
-           for (int i = str.Length - 1; i >= 0 ; i--)
+           int sum = 0 ;
+           for (int i = 0; i <= num; i++)
            {
-               newStr += str[i];
+               sum +=i;
            }
-           return newStr;
+           return sum;
        }
     }
 }
