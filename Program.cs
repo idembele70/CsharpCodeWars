@@ -7,11 +7,16 @@ namespace CsharpCodeWars
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine(RepeatStr());
+            System.Console.WriteLine(Solution());
         }
-        public static String RepeatStr(int n = 2, string s = "Helli")
-        {
-            return new StringBuilder(s.Length * n).Insert(0, s, n).ToString();
-        }
+       static String Solution(string str="wolrd")
+       {
+           string newStr = "";
+           for (int i = str.Length - 1; i >= 0 ; i--)
+           {
+               newStr += str[i];
+           }
+           return newStr;
+       }
     }
 }
