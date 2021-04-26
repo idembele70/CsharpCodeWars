@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 
 namespace CsharpCodeWars
 {
@@ -6,21 +6,17 @@ namespace CsharpCodeWars
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine(countSheep(new bool[] {false,false,true}));
+            System.Console.WriteLine(SquareSum(new int[] {1,2,2}));
         }
-       static int countSheep(bool[] sheeps)
-      {
-          int compteur = 0;
-          for (int i = 0; i < sheeps.Length; i++)
-          {
-              if (sheeps[i])
-              {
-                  compteur+=1;
-              }
-          }
-          return compteur;
-      }
-      
-         
+       public static int SquareSum(int[] n){
+           double sum = 0;
+           for (int i = 0; i < n.Length; i++)
+           {
+             sum+=  System.Math.Pow(n[i],2);
+           }
+           return (int)sum;
+       }
+
+
     }
 }
