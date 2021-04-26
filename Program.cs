@@ -6,24 +6,21 @@ namespace CsharpCodeWars
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine(NoSpace());
+            System.Console.WriteLine(countSheep(new bool[] {false,false,true}));
         }
-        static string NoSpace(string input = "Hello world how are you today.")
-        {
-            string inputNoSpace = "";
-            char space = ' ';
-            for (int i = 0; i < input.Length; i++)
-            {
-                if (input[i] == space)
-                {
-                    inputNoSpace += "";
-                }
-                else
-                {
-                    inputNoSpace += input[i];
-                }
-            }
-            return inputNoSpace;
-        }
+       static int countSheep(bool[] sheeps)
+      {
+          int compteur = 0;
+          for (int i = 0; i < sheeps.Length; i++)
+          {
+              if (sheeps[i])
+              {
+                  compteur+=1;
+              }
+          }
+          return compteur;
+      }
+      
+         
     }
 }
